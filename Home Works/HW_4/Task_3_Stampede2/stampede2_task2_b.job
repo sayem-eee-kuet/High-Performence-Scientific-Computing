@@ -1,0 +1,42 @@
+#!/bin/bash
+#----------------------------------------------------
+#SBATCH -J myjob # Job name
+#SBATCH -o myjob.o%j # Name of stdout output file
+#SBATCH -e myjob.e%j # Name of stderr error file
+#SBATCH -p development # Queue (partition) name
+#SBATCH -N 4 # Total # of nodes (must be 1 for serial)
+#SBATCH -n 272 # Total # of mpi tasks (should be 1 for serial)
+#SBATCH -t 01:10:00 # Run time (hh:mm:ss)
+#SBATCH --mail-user=skhan2@umassd.edu
+#SBATCH --mail-type=all
+
+
+mpicxx -O3 -ffast-math -mavx secret_function.o -Wall -o task2_c task2_c.cpp -lm -no-pie
+
+N=36765
+
+echo "Run in 4 node"
+ibrun ./task2_c $N
+
+# #SBATCH -N 2 # Total # of nodes (must be 1 for serial)
+# #SBATCH -n 136 # Total # of mpi tasks (should be 1 for serial)
+
+# echo "Run in 2 nodes"
+# ibrun ./task2_c 10
+
+# #SBATCH -N 4 # Total # of nodes (must be 1 for serial)
+# #SBATCH -n 272 # Total # of mpi tasks (should be 1 for serial)
+# echo "Run in 4 nodes"
+# ibrun ./task2_c 10
+
+# #SBATCH -N 8 # Total # of nodes (must be 1 for serial)
+# #SBATCH -n 544 # Total # of mpi tasks (should be 1 for serial)
+# echo "Run in 8 nodes"
+# ibrun ./task2_c 10
+
+# #SBATCH -N 16 # Total # of nodes (must be 1 for serial)
+# #SBATCH -n 1088 # Total # of mpi tasks (should be 1 for serial)
+# echo "Run in 16 nodes"
+# ibrun ./task2_c 10
+
+wait

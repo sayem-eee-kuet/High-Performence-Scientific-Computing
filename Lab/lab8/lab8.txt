@@ -1,0 +1,1 @@
+Got very intersting data for task 3. I took linux time using time command. Time data is attached in the file 'lab8_time.png' file.

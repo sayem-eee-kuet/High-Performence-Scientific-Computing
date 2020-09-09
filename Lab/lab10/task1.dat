@@ -1,0 +1,5 @@
+Process 1 send 0.997086 and recieved 0.997086
+Process 2 send 0.997086 and recieved 0.997086
+Process 3 send 0.999777 and recieved 0.997086
+Process 0 send 0.997086 and recieved 0.999777
+Global maximum is 0.999777

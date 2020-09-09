@@ -1,0 +1,5 @@
+path: 
+/usr/lib/gcc/x86_64-linux-gnu/7/include/omp.h
+
+declaration: 
+extern int omp_get_num_threads (void) __GOMP_NOTHROW;

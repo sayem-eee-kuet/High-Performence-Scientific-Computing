@@ -1,0 +1,7 @@
+Run in 4 node
+TACC:  Starting up job 4780198 
+TACC:  Starting parallel tasks... 
+Global Min = -1059.334083
+Time for Reduction = 0.002156s
+Time for total program = 1902.700824s
+TACC:  Shutdown complete. Exiting. 

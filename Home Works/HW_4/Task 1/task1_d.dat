@@ -1,0 +1,15 @@
+For process: 1 Sample: 1 f_i = -843.487175
+For process: 2 Sample: 1 f_i = -481.682701
+For process: 3 Sample: 1 f_i = 302.739395
+For process: 0 Sample: 1 f_i = -284.304114
+For process: 1 Sample: 2 f_i = 581.929413
+For process: 2 Sample: 2 f_i = -103.236199
+For process: 3 Sample: 2 f_i = 207.522565
+For process: 0 Sample: 2 f_i = -683.587792
+Process: 2 Local min = -481.682701
+Process: 3 Local min = 207.522565
+Process: 1 Local min = -843.487175
+Process: 0 Local min = -683.587792
+Global Min = -843.487175
+Time for Reduction = 0.000019s
+Time for total program = 0.062893s

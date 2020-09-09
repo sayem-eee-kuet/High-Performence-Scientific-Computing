@@ -1,0 +1,54 @@
+(base) sayem@SayemLaptop:~/work/umassd-eas520-2019$ git log
+commit 244407d00cad55f89cecda3d44f3893b837502c0 (HEAD -> master, origin/master, origin/HEAD)
+Author: Scott Field <sfield@umassd.edu>
+Date:   Sun Aug 25 18:33:45 2019 +0000
+
+    README.md edited online with Bitbucket
+
+commit ce34c48d5be26772411c30568f8074343738f038
+Author: Scott Field <sfield@umassd.edu>
+Date:   Sun Aug 25 18:32:03 2019 +0000
+
+    Initial commit
+
+a.
+setup.py:  'atari': ['atari_py~=0.2.0', 'Pillow', 'opencv-python'],
+.travis.yml:  # - UBUNTU_VER=14.04 - problems with atari-py
+README.rst:Windows support is experimental - algorithmic, toy_text, classic_control and atari *should* work on Windows (see next section for installation instructions); nevertheless, proceed at your own risk.
+README.rst:    + Upgrade to ALE 0.6 (atari-py 0.2.0) (thanks @JesseFarebro!)
+README.rst:    + remove pyopengl dependency and use more narrow atari-py and box2d-py versions
+README.rst:  *v4*. To keep using the old v3 environments, keep gym <= 0.8.2 and atari-py
+gym/envs/atari/atari_env.py:    import atari_py
+gym/envs/atari/atari_env.py:            "'pip install gym[atari]'.)".format(e))
+gym/envs/atari/atari_env.py:        self.game_path = atari_py.get_game_path(game)
+gym/envs/atari/atari_env.py:        self.ale = atari_py.ALEInterface()
+gym/envs/atari/__init__.py:from gym.envs.atari.atari_env import AtariEnv
+gym/envs/__init__.py:# # print ', '.join(["'{}'".format(name.split('.')[0]) for name in atari_py.list_games()])
+gym/envs/__init__.py:            entry_point='gym.envs.atari:AtariEnv',
+gym/envs/__init__.py:            entry_point='gym.envs.atari:AtariEnv',
+gym/envs/__init__.py:            entry_point='gym.envs.atari:AtariEnv',
+gym/envs/__init__.py:            entry_point='gym.envs.atari:AtariEnv',
+gym/envs/__init__.py:            entry_point='gym.envs.atari:AtariEnv',
+gym/envs/__init__.py:            entry_point='gym.envs.atari:AtariEnv',
+gym/envs/tests/spec_list.py:        import atari_py
+gym/envs/tests/spec_list.py:        if ep.startswith('gym.envs.atari'):
+gym/envs/tests/spec_list.py:            (ep.startswith("gym.envs.atari") and not spec.id.startswith("Pong") and not spec.id.startswith("Seaquest"))
+gym/wrappers/test_flatten_observation.py:    import atari_py
+gym/wrappers/test_flatten_observation.py:    atari_py = None
+gym/wrappers/test_flatten_observation.py:@pytest.mark.skipif(atari_py is None, reason='Only run this test when atari_py is installed')
+gym/wrappers/__init__.py:from gym.wrappers.atari_preprocessing import AtariPreprocessing
+gym/wrappers/test_gray_scale_observation.py:pytest.importorskip('atari_py')
+gym/wrappers/test_frame_stack.py:pytest.importorskip("atari_py")
+gym/wrappers/test_atari_preprocessing.py:pytest.importorskip('atari_py')
+gym/wrappers/test_atari_preprocessing.py:def test_atari_preprocessing():
+gym/wrappers/test_resize_observation.py:    import atari_py
+gym/wrappers/test_resize_observation.py:    atari_py = None
+gym/wrappers/test_resize_observation.py:@pytest.mark.skipif(atari_py is None, reason='Only run this test when atari_py is installed')
+docs/environments.md:'.[atari]'` (you'll need `cmake` installed) and then get started as
+docs/environments.md:This will install `atari-py`, which automatically compiles the [Arcade
+docs/wrappers.md:These can be found here: https://github.com/openai/baselines/blob/master/baselines/common/atari_wrappers.py
+
+36 gym-master/LICENSE.md
+
+35
+

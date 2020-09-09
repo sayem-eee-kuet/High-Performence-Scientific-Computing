@@ -1,0 +1,3 @@
+For x_i = 1: lnL = -0 L = exp(-0)
+For x_i = 0: lnL = -9 L = exp(-9)
+For x_i = 2: lnL = -3609 L = exp(-3609)

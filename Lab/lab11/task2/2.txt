@@ -1,0 +1,120 @@
+Thread 0 working on component 0
+Thread 0 working on component 1
+Thread 0 working on component 2
+Thread 0 working on component 3
+Thread 0 working on component 4
+Thread 0 working on component 5
+Thread 0 working on component 6
+Thread 0 working on component 7
+Thread 0 working on component 8
+Thread 0 working on component 9
+square root of 1.000000 is = 1.000000
+square root of 2.000000 is = 1.414214
+square root of 3.000000 is = 1.732051
+square root of 4.000000 is = 2.000000
+square root of 5.000000 is = 2.236068
+square root of 6.000000 is = 2.449490
+square root of 7.000000 is = 2.645751
+square root of 8.000000 is = 2.828427
+square root of 9.000000 is = 3.000000
+square root of 10.000000 is = 3.162278
+
+real	0m0.002s
+user	0m0.001s
+sys	0m0.000s
+Thread 0 working on component 0
+Thread 0 working on component 1
+Thread 0 working on component 2
+Thread 0 working on component 3
+Thread 0 working on component 4
+Thread 0 working on component 5
+Thread 0 working on component 6
+Thread 0 working on component 7
+Thread 0 working on component 8
+Thread 0 working on component 9
+square root of 1.000000 is = 1.000000
+square root of 2.000000 is = 1.414214
+square root of 3.000000 is = 1.732051
+square root of 4.000000 is = 2.000000
+square root of 5.000000 is = 2.236068
+square root of 6.000000 is = 2.449490
+square root of 7.000000 is = 2.645751
+square root of 8.000000 is = 2.828427
+square root of 9.000000 is = 3.000000
+square root of 10.000000 is = 3.162278
+
+real	0m0.002s
+user	0m0.001s
+sys	0m0.000s
+Thread 0 working on component 0
+Thread 0 working on component 1
+Thread 0 working on component 2
+Thread 0 working on component 3
+Thread 0 working on component 4
+Thread 0 working on component 5
+Thread 0 working on component 6
+Thread 0 working on component 7
+Thread 0 working on component 8
+Thread 0 working on component 9
+square root of 1.000000 is = 1.000000
+square root of 2.000000 is = 1.414214
+square root of 3.000000 is = 1.732051
+square root of 4.000000 is = 2.000000
+square root of 5.000000 is = 2.236068
+square root of 6.000000 is = 2.449490
+square root of 7.000000 is = 2.645751
+square root of 8.000000 is = 2.828427
+square root of 9.000000 is = 3.000000
+square root of 10.000000 is = 3.162278
+
+real	0m0.002s
+user	0m0.001s
+sys	0m0.000s
+Thread 0 working on component 0
+Thread 0 working on component 1
+Thread 0 working on component 2
+Thread 0 working on component 3
+Thread 0 working on component 4
+Thread 0 working on component 5
+Thread 0 working on component 6
+Thread 0 working on component 7
+Thread 0 working on component 8
+Thread 0 working on component 9
+square root of 1.000000 is = 1.000000
+square root of 2.000000 is = 1.414214
+square root of 3.000000 is = 1.732051
+square root of 4.000000 is = 2.000000
+square root of 5.000000 is = 2.236068
+square root of 6.000000 is = 2.449490
+square root of 7.000000 is = 2.645751
+square root of 8.000000 is = 2.828427
+square root of 9.000000 is = 3.000000
+square root of 10.000000 is = 3.162278
+
+real	0m0.002s
+user	0m0.001s
+sys	0m0.000s
+Thread 0 working on component 0
+Thread 0 working on component 1
+Thread 0 working on component 2
+Thread 0 working on component 3
+Thread 0 working on component 4
+Thread 0 working on component 5
+Thread 0 working on component 6
+Thread 0 working on component 7
+Thread 0 working on component 8
+Thread 0 working on component 9
+square root of 1.000000 is = 1.000000
+square root of 2.000000 is = 1.414214
+square root of 3.000000 is = 1.732051
+square root of 4.000000 is = 2.000000
+square root of 5.000000 is = 2.236068
+square root of 6.000000 is = 2.449490
+square root of 7.000000 is = 2.645751
+square root of 8.000000 is = 2.828427
+square root of 9.000000 is = 3.000000
+square root of 10.000000 is = 3.162278
+
+real	0m0.002s
+user	0m0.001s
+sys	0m0.000s

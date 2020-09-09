@@ -1,0 +1,5 @@
+/tmp/slurmd/job4524950/slurm_script: line 23: export: `2': not a valid identifier
+
+real	9m22.637s
+user	9m22.328s
+sys	0m0.036s

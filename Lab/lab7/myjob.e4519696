@@ -1,0 +1,2 @@
+/tmp/slurmd/job4519696/slurm_script: line 16: export: `2': not a valid identifier
+/tmp/slurmd/job4519696/slurm_script: line 21: export: `64': not a valid identifier

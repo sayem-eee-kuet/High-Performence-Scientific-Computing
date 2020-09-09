@@ -1,0 +1,13 @@
+For process: 1 Sample: 1 f_i = -63.754818
+For process: 2 Sample: 1 f_i = -123.294697
+For process: 3 Sample: 1 f_i = -339.753222
+For process: 0 Sample: 1 f_i = -379.158446
+For process: 1 Sample: 2 f_i = -55.733516
+For process: 2 Sample: 2 f_i = -461.824006
+For process: 3 Sample: 2 f_i = -335.221245
+For process: 0 Sample: 2 f_i = 91.284003
+Process: 2 Local min = -461.824006
+Process: 3 Local min = -339.753222
+Process: 1 Local min = -63.754818
+Process: 0 Local min = -379.158446
+Global Min = -461.824006

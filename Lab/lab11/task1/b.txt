@@ -1,0 +1,235 @@
+(base) sayem@SayemLaptop:~/Desktop/Study/Fall 2019/EAS 520/work/eas520-2019-sayemkhan/lab11/task1/b$ diff noOMP.s withOMP.s
+4d3
+< 	.align 8
+6,7d4
+< 	.string	"Thread %d working on component %d\n"
+< .LC1:
+23c20
+< 	subq	$72, %rsp
+---
+> 	subq	$88, %rsp
+32,33c29,30
+< 	movl	$10, -88(%rbp)
+< 	movl	-88(%rbp), %eax
+---
+> 	movl	$10, -108(%rbp)
+> 	movl	-108(%rbp), %eax
+36c33
+< 	movq	%rdx, -72(%rbp)
+---
+> 	movq	%rdx, -96(%rbp)
+58,59c55,56
+< 	movq	%rax, -64(%rbp)
+< 	movl	-88(%rbp), %eax
+---
+> 	movq	%rax, -88(%rbp)
+> 	movl	-108(%rbp), %eax
+62c59
+< 	movq	%rdx, -56(%rbp)
+---
+> 	movq	%rdx, -80(%rbp)
+84,85c81,82
+< 	movq	%rax, -48(%rbp)
+< 	movl	$0, -76(%rbp)
+---
+> 	movq	%rax, -72(%rbp)
+> 	movl	$0, -100(%rbp)
+88c85
+< 	movl	-76(%rbp), %eax
+---
+> 	movl	-100(%rbp), %eax
+91,92c88,89
+< 	movq	-64(%rbp), %rax
+< 	movl	-76(%rbp), %edx
+---
+> 	movq	-88(%rbp), %rax
+> 	movl	-100(%rbp), %edx
+95c92
+< 	addl	$1, -76(%rbp)
+---
+> 	addl	$1, -100(%rbp)
+97,98c94,95
+< 	movl	-76(%rbp), %eax
+< 	cmpl	-88(%rbp), %eax
+---
+> 	movl	-100(%rbp), %eax
+> 	cmpl	-108(%rbp), %eax
+100c97,109
+< 	movl	$0, -80(%rbp)
+---
+> 	movq	-72(%rbp), %rax
+> 	movq	%rax, -56(%rbp)
+> 	movq	-88(%rbp), %rax
+> 	movq	%rax, -64(%rbp)
+> 	movl	-108(%rbp), %eax
+> 	movl	%eax, -48(%rbp)
+> 	leaq	-64(%rbp), %rax
+> 	movl	$0, %ecx
+> 	movl	$0, %edx
+> 	movq	%rax, %rsi
+> 	leaq	main._omp_fn.0(%rip), %rdi
+> 	call	GOMP_parallel@PLT
+> 	movl	$0, -104(%rbp)
+103,131c112,113
+< 	call	omp_get_thread_num@PLT
+< 	movl	%eax, %ecx
+< 	movl	-80(%rbp), %eax
+< 	movl	%eax, %edx
+< 	movl	%ecx, %esi
+< 	leaq	.LC0(%rip), %rdi
+< 	movl	$0, %eax
+< 	call	printf@PLT
+< 	movq	-64(%rbp), %rax
+< 	movl	-80(%rbp), %edx
+< 	movslq	%edx, %rdx
+< 	movss	(%rax,%rdx,4), %xmm0
+< 	cvtss2sd	%xmm0, %xmm0
+< 	call	sqrt@PLT
+< 	cvtsd2ss	%xmm0, %xmm0
+< 	movq	-48(%rbp), %rax
+< 	movl	-80(%rbp), %edx
+< 	movslq	%edx, %rdx
+< 	movss	%xmm0, (%rax,%rdx,4)
+< 	addl	$1, -80(%rbp)
+< .L4:
+< 	movl	-80(%rbp), %eax
+< 	cmpl	-88(%rbp), %eax
+< 	jl	.L5
+< 	movl	$0, -84(%rbp)
+< 	jmp	.L6
+< .L7:
+< 	movq	-48(%rbp), %rax
+< 	movl	-84(%rbp), %edx
+---
+> 	movq	-72(%rbp), %rax
+> 	movl	-104(%rbp), %edx
+135,136c117,118
+< 	movq	-64(%rbp), %rax
+< 	movl	-84(%rbp), %edx
+---
+> 	movq	-88(%rbp), %rax
+> 	movl	-104(%rbp), %edx
+140c122
+< 	leaq	.LC1(%rip), %rdi
+---
+> 	leaq	.LC0(%rip), %rdi
+143,147c125,129
+< 	addl	$1, -84(%rbp)
+< .L6:
+< 	movl	-84(%rbp), %eax
+< 	cmpl	-88(%rbp), %eax
+< 	jl	.L7
+---
+> 	addl	$1, -104(%rbp)
+> .L4:
+> 	movl	-104(%rbp), %eax
+> 	cmpl	-108(%rbp), %eax
+> 	jl	.L5
+152c134
+< 	je	.L9
+---
+> 	je	.L7
+154c136
+< .L9:
+---
+> .L7:
+164a147,246
+> 	.section	.rodata
+> 	.align 8
+> .LC1:
+> 	.string	"Thread %d working on component %d\n"
+> 	.text
+> 	.type	main._omp_fn.0, @function
+> main._omp_fn.0:
+> .LFB1:
+> 	.cfi_startproc
+> 	pushq	%rbp
+> 	.cfi_def_cfa_offset 16
+> 	.cfi_offset 6, -16
+> 	movq	%rsp, %rbp
+> 	.cfi_def_cfa_register 6
+> 	pushq	%r12
+> 	pushq	%rbx
+> 	subq	$48, %rsp
+> 	.cfi_offset 12, -24
+> 	.cfi_offset 3, -32
+> 	movq	%rdi, -56(%rbp)
+> 	movq	%fs:40, %rax
+> 	movq	%rax, -24(%rbp)
+> 	xorl	%eax, %eax
+> 	movq	-56(%rbp), %rax
+> 	movq	8(%rax), %rax
+> 	movq	%rax, -40(%rbp)
+> 	movq	-56(%rbp), %rax
+> 	movq	(%rax), %rax
+> 	movq	%rax, -32(%rbp)
+> 	movq	-56(%rbp), %rax
+> 	movl	16(%rax), %eax
+> 	movl	%eax, -44(%rbp)
+> 	movl	-44(%rbp), %ebx
+> 	call	omp_get_num_threads@PLT
+> 	movl	%eax, %r12d
+> 	call	omp_get_thread_num@PLT
+> 	movl	%eax, %esi
+> 	movl	%ebx, %eax
+> 	cltd
+> 	idivl	%r12d
+> 	movl	%eax, %ecx
+> 	movl	%ebx, %eax
+> 	cltd
+> 	idivl	%r12d
+> 	movl	%edx, %eax
+> 	cmpl	%eax, %esi
+> 	jl	.L9
+> .L12:
+> 	imull	%ecx, %esi
+> 	movl	%esi, %edx
+> 	addl	%edx, %eax
+> 	leal	(%rax,%rcx), %ebx
+> 	cmpl	%ebx, %eax
+> 	jge	.L10
+> 	movl	%eax, -48(%rbp)
+> .L11:
+> 	call	omp_get_thread_num@PLT
+> 	movl	%eax, %ecx
+> 	movl	-48(%rbp), %eax
+> 	movl	%eax, %edx
+> 	movl	%ecx, %esi
+> 	leaq	.LC1(%rip), %rdi
+> 	movl	$0, %eax
+> 	call	printf@PLT
+> 	movq	-32(%rbp), %rax
+> 	movl	-48(%rbp), %edx
+> 	movslq	%edx, %rdx
+> 	movss	(%rax,%rdx,4), %xmm0
+> 	cvtss2sd	%xmm0, %xmm0
+> 	call	sqrt@PLT
+> 	cvtsd2ss	%xmm0, %xmm0
+> 	movq	-40(%rbp), %rax
+> 	movl	-48(%rbp), %edx
+> 	movslq	%edx, %rdx
+> 	movss	%xmm0, (%rax,%rdx,4)
+> 	addl	$1, -48(%rbp)
+> 	cmpl	%ebx, -48(%rbp)
+> 	jl	.L11
+> .L10:
+> 	call	GOMP_barrier@PLT
+> 	movq	-24(%rbp), %rax
+> 	xorq	%fs:40, %rax
+> 	je	.L13
+> 	jmp	.L14
+> .L9:
+> 	movl	$0, %eax
+> 	addl	$1, %ecx
+> 	jmp	.L12
+> .L14:
+> 	call	__stack_chk_fail@PLT
+> .L13:
+> 	addq	$48, %rsp
+> 	popq	%rbx
+> 	popq	%r12
+> 	popq	%rbp
+> 	.cfi_def_cfa 7, 8
+> 	ret
+> 	.cfi_endproc
+> .LFE1:

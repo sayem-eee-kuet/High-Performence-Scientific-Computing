@@ -1,0 +1,70 @@
+#!/bin/bash
+##-------------------------------
+#SBATCH -J 3_c_scale       #Job name
+#SBATCH -o 3_c_scale.o%j   #Name of stdout
+#SBATCH -e 3_c_scale.e%j
+#SBATCH -p development
+#SBATCH -N 1
+#SBATCH -n 1
+#SBATCH -t 00:20:00
+#SBATCH --mail-user=skhan2@umassd.edu
+#SBATCH --mail-type=all
+#
+g++ -Wall -fopenmp -O3 -ffast-math -mavx -o mc10d_parallel_optimized_3_c_scaling mc10d_parallel_3_c_scaling.cpp -lm
+## Strong scaling test ##
+
+file_1="3_c_dataStrong.dat"
+file_2="3_c_dataWeak.dat"
+
+if [ -f $file_1 ] ; then
+    rm $file_1
+fi
+
+
+if [ -f $file_2 ] ; then
+    rm $file_2
+fi
+
+
+i=1
+threadNum="1 2 4 8 16 32 64"
+for th in $threadNum
+do
+    echo "Number of thread in use: "$th
+    while [[ i -le 100 ]]
+    do
+    echo "Strong Scaling Test: "$i
+    ./mc10d_parallel_optimized_3_c_scaling $((10**6)) $th >> 3_c_dataStrong.dat
+    ((i = i + 1))
+    done
+    i=1
+done
+
+
+echo "______Weak Scaling test_______"
+## Weak scaling test ##
+i=1
+threadNum="1 2 4 8 16 32 64"
+
+    for th in $threadNum
+    do
+    while [[ i -le 100 ]]
+    do
+        echo "Weak Scaling Test: "$i
+        ((N = 100000 * $th))
+        echo "Number of thread in use: "$th
+        echo "Number of sample point: "$N
+        ./mc10d_parallel_optimized_3_c_scaling $N $th >> 3_c_dataWeak.dat
+        ((i = i + 1))
+    done
+    i=1
+done
+
+# wait
+# python3 plot.py
+# echo "Done! Check data files: 3_c_dataStrong.dat & 3_c_dataWeak.dat"
+
+
+
+
+

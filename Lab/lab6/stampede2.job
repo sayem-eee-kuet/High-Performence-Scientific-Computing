@@ -1,0 +1,21 @@
+#!/bin//bash
+#-------------------------------
+#SBATCH -J myjob       #Job name
+#SBATCH -o myjob.o%j   #Name of stdout
+#SBATCH -e myjob.e%j
+#SBATCH -p development
+#SBATCH -N 1
+#SBATCH -n 1
+#SBATCH -t 00:05:00
+#SBATCH --mail-user=skhan2@umassd.edu
+#SBATCH --mail-type=all
+#
+echo "Hello"
+#
+./trap 10 &
+./trap 100 &
+./trap 1000 &
+./trap 10000 &
+#
+wait
+

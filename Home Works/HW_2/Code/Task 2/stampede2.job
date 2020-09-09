@@ -1,0 +1,21 @@
+#!/bin/bash
+##-------------------------------
+#SBATCH -J myjob       #Job name
+#SBATCH -o myjob.o%j   #Name of stdout
+#SBATCH -e myjob.e%j
+#SBATCH -p development
+#SBATCH -N 1
+#SBATCH -n 64
+#SBATCH -t 00:10:00
+#SBATCH --mail-user=skhan2@umassd.edu
+#SBATCH --mail-type=all
+#
+
+
+echo "Run 1..."
+export OMP_NUM_THREADS=64
+export $OMP_NUM_THREADS
+k=3
+/usr/bin/time -f "%e" ./likelihood_fqn_time $((10**k))
+
+

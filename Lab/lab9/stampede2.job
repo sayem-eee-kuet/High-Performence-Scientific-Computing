@@ -1,0 +1,16 @@
+#!/bin/bash
+##-------------------------------
+#SBATCH -J myjob       #Job name
+#SBATCH -o myjob.o%j   #Name of stdout
+#SBATCH -e myjob.e%j
+#SBATCH -p development
+#SBATCH -N 2
+#SBATCH -n 128
+#SBATCH -t 00:05:00
+#SBATCH --mail-user=skhan2@umassd.edu
+#SBATCH --mail-type=all
+
+#mpicc -Wall -o optimizer code.c -lm
+echo "Hello..."
+ibrun ./optimizer 10000
+

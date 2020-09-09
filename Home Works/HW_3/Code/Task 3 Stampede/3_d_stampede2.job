@@ -1,0 +1,35 @@
+#!/bin/bash
+##-------------------------------
+#SBATCH -J 3_d       #Job name
+#SBATCH -o 3_d.o%j   #Name of stdout
+#SBATCH -e 3_d.e%j
+#SBATCH -p development
+#SBATCH -N 1
+#SBATCH -n 1
+#SBATCH -t 00:20:00
+#SBATCH --mail-user=skhan2@umassd.edu
+#SBATCH --mail-type=all
+#
+
+## Strong scaling test ##
+g++ -Wall -fopenmp -O3 -ffast-math -mavx -o mc10d_parallel_optimized_3_d_1 mc10d_parallel_3_d_1.cpp -lm
+file_1="3_d_data.dat"
+#file_2="3_c_dataWeak.dat"
+
+if [ -f $file_1 ] ; then
+    rm $file_1
+fi
+
+N=17179869176
+th=64
+
+./mc10d_parallel_optimized_3_d_1 $N $th >> 3_d_data.dat
+
+wait
+
+echo "Done! Check data file: 3_d_data.dat"
+
+
+
+
+
